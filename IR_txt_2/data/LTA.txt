@@ -1,0 +1,43 @@
+Title:               Treasury Long-Term Average (25 years and above) (DISCONTINUED)
+Series ID:           LTA
+Source:              Board of Governors of the Federal Reserve System (US)
+Release:             H.15 Selected Interest Rates
+Seasonal Adjustment: Not Seasonally Adjusted
+Frequency:           Monthly
+Units:               Percent
+Date Range:          2002-02-01 to 2004-04-01
+Last Updated:        2006-06-07 4:11 PM CDT
+Notes:               Based on the unweighted average of the bid yields for all Treasury
+                     fixed-coupon securities with remaining terms to maturity of 25 years
+                     and over. Averages of business days. For further information, please
+                     refer to
+                     http://www.federalreserve.gov/releases/h15/treas_long-term_rate_discontinuence.htm.
+
+DATE       VALUE
+2002-02-01  5.56
+2002-03-01  5.88
+2002-04-01  5.82
+2002-05-01  5.79
+2002-06-01  5.66
+2002-07-01  5.54
+2002-08-01  5.23
+2002-09-01  4.90
+2002-10-01  5.07
+2002-11-01  5.10
+2002-12-01  5.06
+2003-01-01  5.07
+2003-02-01  4.93
+2003-03-01  4.90
+2003-04-01  4.99
+2003-05-01  4.61
+2003-06-01  4.45
+2003-07-01  5.00
+2003-08-01  5.41
+2003-09-01  5.23
+2003-10-01  5.24
+2003-11-01  5.20
+2003-12-01  5.15
+2004-01-01  5.05
+2004-02-01  4.99
+2004-03-01  4.79
+2004-04-01  5.20

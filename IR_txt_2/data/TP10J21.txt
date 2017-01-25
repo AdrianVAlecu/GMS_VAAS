@@ -1,0 +1,90 @@
+Title:               10-Year 1-1/8% Treasury Inflation-Indexed Note, Due 1/15/2021©
+Series ID:           TP10J21
+Source:              Haver Analytics
+Release:             Monthly Treasury Inflation-Indexed Securities (Not a Press Release)
+Seasonal Adjustment: Not Seasonally Adjusted
+Frequency:           Monthly
+Units:               Percent
+Date Range:          2011-02-01 to 2016-12-01
+Last Updated:        2017-01-03 8:56 AM CST
+Notes:               Yield to maturity on accrued principal. Averages of business days.
+                     Treasury Inflation-Protected Securities, or TIPS, are securities whose
+                     principal is tied to the Consumer Price Index (CPI). The principal
+                     increases with inflation and decreases with deflation. When the
+                     security matures, the U.S. Treasury pays the original or adjusted
+                     principal, whichever is greater.
+                     Copyright, 2016, Haver Analytics. Reprinted with permission.
+                     Calculated from data provided by the Wall Street Journal.
+
+DATE         VALUE
+2011-02-01   1.230
+2011-03-01   0.955
+2011-04-01   0.821
+2011-05-01   0.719
+2011-06-01   0.687
+2011-07-01   0.538
+2011-08-01   0.037
+2011-09-01  -0.009
+2011-10-01   0.113
+2011-11-01  -0.081
+2011-12-01  -0.139
+2012-01-01  -0.254
+2012-02-01  -0.442
+2012-03-01  -0.337
+2012-04-01  -0.432
+2012-05-01  -0.577
+2012-06-01  -0.674
+2012-07-01  -0.750
+2012-08-01  -0.724
+2012-09-01  -0.924
+2012-10-01  -1.000
+2012-11-01  -1.001
+2012-12-01  -1.022
+2013-01-01  -0.939
+2013-02-01  -0.967
+2013-03-01  -1.028
+2013-04-01  -1.093
+2013-05-01  -0.776
+2013-06-01  -0.110
+2013-07-01   0.098
+2013-08-01   0.190
+2013-09-01   0.292
+2013-10-01   0.020
+2013-11-01   0.089
+2013-12-01   0.297
+2014-01-01   0.194
+2014-02-01   0.046
+2014-03-01   0.084
+2014-04-01   0.132
+2014-05-01  -0.034
+2014-06-01  -0.029
+2014-07-01  -0.108
+2014-08-01  -0.083
+2014-09-01   0.211
+2014-10-01   0.152
+2014-11-01   0.194
+2014-12-01   0.351
+2015-01-01   0.133
+2015-02-01  -0.013
+2015-03-01  -0.027
+2015-04-01  -0.277
+2015-05-01  -0.052
+2015-06-01   0.088
+2015-07-01   0.133
+2015-08-01   0.305
+2015-09-01   0.363
+2015-10-01   0.219
+2015-11-01   0.384
+2015-12-01   0.441
+2016-01-01   0.308
+2016-02-01   0.110
+2016-03-01  -0.082
+2016-04-01  -0.282
+2016-05-01  -0.266
+2016-06-01  -0.332
+2016-07-01  -0.383
+2016-08-01  -0.234
+2016-09-01  -0.244
+2016-10-01  -0.366
+2016-11-01  -0.190
+2016-12-01  -0.029

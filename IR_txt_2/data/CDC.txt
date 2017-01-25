@@ -1,0 +1,15 @@
+Title:               Rate for Credit Under the Century Date Change Special Liquidity Facility (DISCONTINUED)
+Series ID:           CDC
+Source:              Board of Governors of the Federal Reserve System (US)
+Release:             FOMC Press Release
+Seasonal Adjustment: Not Seasonally Adjusted
+Frequency:           Not Applicable
+Units:               Percent
+Date Range:          1999-10-01 to 2000-02-02
+Last Updated:        2000-02-02 12:00 AM CST
+Notes:               
+
+DATE       VALUE
+1999-10-01  6.75
+1999-11-16  7.00
+2000-02-02  7.25

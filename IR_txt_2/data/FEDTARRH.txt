@@ -1,0 +1,28 @@
+Title:               FOMC Summary of Economic Projections for the Fed Funds Rate, Range, High
+Series ID:           FEDTARRH
+Source:              U.S. Federal Open Market Committee, Federal Reserve Bank of St. Louis
+Release:             Summary of Economic Projections (Not a Press Release)
+Seasonal Adjustment: Not Seasonally Adjusted
+Frequency:           Annual
+Units:               Percent
+Date Range:          2016-01-01 to 2019-01-01
+Last Updated:        2016-12-14 3:36 PM CST
+Notes:               The projections for the federal funds rate are the value of the
+                     midpoint of the projected appropriate target range for the federal
+                     funds rate or the projected appropriate target level for the federal
+                     funds rate at the end of the specified calendar year or over the
+                     longer run. Each participant's projections are based on his or her
+                     assessment of appropriate monetary policy. The range for each variable
+                     in a given year includes all participants' projections, from lowest to
+                     highest, for that variable in the given year. This series represents
+                     the high value of the range forecast established by the Federal Open
+                     Market Committee.
+                     
+                     Digitized originals of this release can be found at
+                     https://fraser.stlouisfed.org/publication/?pid=677.
+
+DATE       VALUE
+2016-01-01   0.6
+2017-01-01   2.1
+2018-01-01   3.4
+2019-01-01   3.9

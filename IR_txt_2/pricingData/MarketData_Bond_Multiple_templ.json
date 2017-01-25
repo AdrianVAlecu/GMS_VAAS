@@ -1,0 +1,192 @@
+{
+  "marketData": [
+    {
+      "id": {
+        "type": "FIXED_INCOME",
+        "parameters": [
+          "COUPON",
+          "USD"
+        ]
+      },
+      "points": [
+        {
+          "x": 17004,
+          "y": null,
+          "z": null,
+          "values": [
+            0,
+            0
+          ]
+        },
+        {
+          "x": 17188,
+          "y": null,
+          "z": null,
+          "values": [
+            0.03,
+            0.06
+          ]
+        },
+        {
+          "x": 17369,
+          "y": null,
+          "z": null,
+          "values": [
+    		0.03,
+            0.06
+          ]
+        },
+        {
+          "x": 17553,
+          "y": null,
+          "z": null,
+          "values": [
+            0.03,
+            0.06
+          ]
+        },
+        {
+          "x": 17734,
+          "y": null,
+          "z": null,
+          "values": [
+            0.03,
+            0.06
+          ]
+        },
+        {
+          "x": 17918,
+          "y": null,
+          "z": null,
+          "values": [
+            0.03,
+            0.06
+          ]
+        },
+        {
+          "x": 18099,
+          "y": null,
+          "z": null,
+          "values": [
+            0.03,
+            0.06
+          ]
+        },
+        {
+          "x": 18283,
+          "y": null,
+          "z": null,
+          "values": [
+            0.03,
+            0.06
+          ]
+        },
+        {
+          "x": 18465,
+          "y": null,
+          "z": null,
+          "values": [
+            0.03,
+            0.06
+          ]
+        },
+        {
+          "x": 18649,
+          "y": null,
+          "z": null,
+          "values": [
+            0.03,
+            0.06
+          ]
+        },
+        {
+          "x": 18830,
+          "y": null,
+          "z": null,
+          "values": [
+            0.03,
+            0.06
+          ]
+        }
+      ],
+      "metaData": {}
+    },
+    {
+      "id": {
+        "type": "YIELD_CURVE",
+        "parameters": [
+          "USD",
+          "COUPON_BEARING_BOND_RATE"
+        ]
+      },
+      "points": [
+        {
+          "x": 365,
+          "y": null,
+          "z": null,
+          "values": [
+            0.0059,
+            0.0059
+          ]
+        },
+        {
+          "x": 731,
+          "y": null,
+          "z": null,
+          "values": [
+            0.0191,
+            0.0191
+          ]
+        },
+        {
+          "x": 1096,
+          "y": null,
+          "z": null,
+          "values": [
+            0.0305,
+            0.0305
+          ]
+        },
+        {
+          "x": 1826,
+          "y": null,
+          "z": null,
+          "values": [
+            0.0417,
+            0.0417
+          ]
+        },
+        {
+          "x": 2192,
+          "y": null,
+          "z": null,
+          "values": [
+            0.058600000000000006,
+            0.058600000000000006
+          ]
+        },
+        {
+          "x": 2557,
+          "y": null,
+          "z": null,
+          "values": [
+            0.06840600000000001,
+            0.06840600000000001
+          ]
+        },
+        {
+          "x": 7305,
+          "y": null,
+          "z": null,
+          "values": [
+            0.0775,
+            0.0775
+          ]
+        }
+      ],
+      "metaData": {}
+    }
+  ],
+  "historicalData": [],
+  "configuration": {}
+}

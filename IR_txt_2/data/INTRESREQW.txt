@@ -1,0 +1,138 @@
+Title:               Interest Rate Paid on Balances Maintained To Satisfy Reserve Balance Requirements (DISCONTINUED)
+Series ID:           INTRESREQW
+Source:              Board of Governors of the Federal Reserve System (US)
+Release:             H.3 Aggregate Reserves of Depository Institutions and the Monetary Base
+Seasonal Adjustment: Not Seasonally Adjusted
+Frequency:           Weekly, Ending Wednesday
+Units:               Percent
+Date Range:          2013-07-03 to 2015-07-22
+Last Updated:        2015-07-23 3:41 PM CDT
+Notes:               Balances maintained to satisfy reserve balance requirements up to and
+                     including the top of the penalty-free band are remunerated at the rate
+                     paid on balances maintained up to the top of the penalty-free band.
+                     
+                     Effective February 2, 1984, reserve computation and maintenance
+                     periods have been changed from weekly to bi-weekly. Series with data
+                     prior to February 2, 1984 have different values reported from one week
+                     to the next. After February 2, 1984, the value repeats for 2
+                     consecutive weeks.
+                     Effective July 23, 2015, the Federal Reserve Board changed the formula
+                     for calculating interest for depository institutions with excess
+                     balances. The new formula is based on the daily interest rate on
+                     excess reserves (IOER rate) and the daily balance maintained, rather
+                     than the maintenance period IOER rate and the average balance
+                     maintained over the maintenance period. The IOER and IORR rates
+                     effective for a given day are now published on the "Interest on
+                     Required Balances and Excess Balances" page on the Federal Reserve
+                     Board's website at
+                     http://www.federalreserve.gov/monetarypolicy/reqresbalances.htm
+
+DATE       VALUE
+2013-07-03  0.25
+2013-07-10  0.25
+2013-07-17  0.25
+2013-07-24  0.25
+2013-07-31  0.25
+2013-08-07  0.25
+2013-08-14  0.25
+2013-08-21  0.25
+2013-08-28  0.25
+2013-09-04  0.25
+2013-09-11  0.25
+2013-09-18  0.25
+2013-09-25  0.25
+2013-10-02  0.25
+2013-10-09  0.25
+2013-10-16  0.25
+2013-10-23  0.25
+2013-10-30  0.25
+2013-11-06  0.25
+2013-11-13  0.25
+2013-11-20  0.25
+2013-11-27  0.25
+2013-12-04  0.25
+2013-12-11  0.25
+2013-12-18  0.25
+2013-12-25  0.25
+2014-01-01  0.25
+2014-01-08  0.25
+2014-01-15  0.25
+2014-01-22  0.25
+2014-01-29  0.25
+2014-02-05  0.25
+2014-02-12  0.25
+2014-02-19  0.25
+2014-02-26  0.25
+2014-03-05  0.25
+2014-03-12  0.25
+2014-03-19  0.25
+2014-03-26  0.25
+2014-04-02  0.25
+2014-04-09  0.25
+2014-04-16  0.25
+2014-04-23  0.25
+2014-04-30  0.25
+2014-05-07  0.25
+2014-05-14  0.25
+2014-05-21  0.25
+2014-05-28  0.25
+2014-06-04  0.25
+2014-06-11  0.25
+2014-06-18  0.25
+2014-06-25  0.25
+2014-07-02  0.25
+2014-07-09  0.25
+2014-07-16  0.25
+2014-07-23  0.25
+2014-07-30  0.25
+2014-08-06  0.25
+2014-08-13  0.25
+2014-08-20  0.25
+2014-08-27  0.25
+2014-09-03  0.25
+2014-09-10  0.25
+2014-09-17  0.25
+2014-09-24  0.25
+2014-10-01  0.25
+2014-10-08  0.25
+2014-10-15  0.25
+2014-10-22  0.25
+2014-10-29  0.25
+2014-11-05  0.25
+2014-11-12  0.25
+2014-11-19  0.25
+2014-11-26  0.25
+2014-12-03  0.25
+2014-12-10  0.25
+2014-12-17  0.25
+2014-12-24  0.25
+2014-12-31  0.25
+2015-01-07  0.25
+2015-01-14  0.25
+2015-01-21  0.25
+2015-01-28  0.25
+2015-02-04  0.25
+2015-02-11  0.25
+2015-02-18  0.25
+2015-02-25  0.25
+2015-03-04  0.25
+2015-03-11  0.25
+2015-03-18  0.25
+2015-03-25  0.25
+2015-04-01  0.25
+2015-04-08  0.25
+2015-04-15  0.25
+2015-04-22  0.25
+2015-04-29  0.25
+2015-05-06  0.25
+2015-05-13  0.25
+2015-05-20  0.25
+2015-05-27  0.25
+2015-06-03  0.25
+2015-06-10  0.25
+2015-06-17  0.25
+2015-06-24  0.25
+2015-07-01  0.25
+2015-07-08  0.25
+2015-07-15  0.25
+2015-07-22  0.25
