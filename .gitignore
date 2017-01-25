@@ -1,0 +1,32 @@
+*.class
+
+# Package Files #
+#*.jar
+*.war
+*.ear
+
+# Intellij #
+.idea
+*.iml
+
+# Eclipse #
+.settings
+.classpath
+.metadata
+.externalToolBuilders
+.project
+maven-eclipse.xml
+.recommenders
+
+# Maven #
+target
+
+# os #
+.directory
+
+# Altassian
+atlassian-ide-plugin.xml
+
+.gitattributes
+pom.xml.versionsBackup
+

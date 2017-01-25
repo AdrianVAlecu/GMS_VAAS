@@ -1,0 +1,9 @@
+/**
+* Returns the square of a number
+* @param z
+*        Number whose square is to be calculated
+*/
+ 
+def returnsquare_templ(z){
+    return z * z
+}

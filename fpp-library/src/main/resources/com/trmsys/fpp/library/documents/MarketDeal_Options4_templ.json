@@ -1,0 +1,12 @@
+{
+  "E": 102.5,
+  "maturity_date": "2029-07-30",
+  "value_date": "2016-07-30",
+  "stockdata": [
+    {
+      "name": "COCA_COLA",
+      "instrument": "EQUITY",
+      "currency": "USD"
+    }
+  ]
+}

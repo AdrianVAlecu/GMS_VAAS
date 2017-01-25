@@ -1,0 +1,19 @@
+/**
+ * This   Script is used to price a vanilla equity call option using the Black Scholes Model
+ * It is made to demonstrate knowledge of the structure of the marketdata json file and of the module which is used to define functions.  
+ * You can find more information about the examples in which this script is used in the VaaS tutorials, chapter 4 Financial Models Examples
+ * where this psl is also part of a template 
+ *  
+ */
+
+
+def S = data0D("STOCK_PRICE", ["ABC"], calculationDate())  // Spot price array of doubles
+def E = 100  // Strike price
+def r = 0.05  // Interest rate
+def vol = 0.2  // Volatility
+def tau = 0.05 //  Time to expiry expressed in year
+def D = 0.0 // Continuously-comp
+
+def Call_Option = getVanillaBScall_templ(S, E, vol, tau, r, D) 
+
+return Call_Option

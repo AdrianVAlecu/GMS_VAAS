@@ -1,0 +1,34 @@
+/**
+ * This script is used to price a vanilla call option by using values from the market deal and market data json files in order to introduce
+ * You can find more information about this script in the Vaas Tutorial Chapter 6 Parallelization axes
+ * The user to more advanced methods of accessing data from these files:
+ * Market deal files: MarketDeal_Options1_templ.json, MarketDeal_Options2_templ.json, MarketDeal_Options3_templ.json, MarketDeal_Options4_templ.json
+ * Market data file: MaketData_Options_templ.json                                                                                     
+ */
+
+// DATA FROM the market deal files
+def calc_date1 = dateToDays(maturity_date)
+def calc_date2 = dateToDays(value_date)
+// THE VARIABLE E REFERS TO THE STRIKE PRICE AND IT IS OBTAINED FROM NewMarketDeal.json AS WELL
+
+// DATA FROM the market deal files
+def S_COKE = data0D("ASSET", ["COCA_COLA","EQUITY","USD"], calculationDate())  // Spot prices for Coca-cola
+def D_COKE = data0D("DIV_YIELD",["COCA_COLA","CONTINUOUS"], calculationDate()) // Continuously compounded divident yield
+def vol_json = data2D("EQ_VOL_SURFACE", ["COCA_COLA","EQUITY","USD"], calculationDate())  // Volatility surface 
+def r = 0.05 // Risk-free interest rate
+
+// DATA AXIS FROM MaketData_Options.json
+def axisY = axis("EQ_VOL_SURFACE", ["COCA_COLA","EQUITY","USD"], 0)// Maturity
+def axisZ = axis("EQ_VOL_SURFACE", ["COCA_COLA","EQUITY","USD"], 1)// Strike
+
+// TIME TO MATURITY
+def tau = (calc_date1 - calc_date2) / 365 // Time to expiry as a percentage of a year with basis 365
+
+// VOLATILITY VALUE BY INTERPOLATION OF VOLATILITY SURFACE
+def y = calc_date1 - calc_date2 // Time-to-maturity of option IN DAYS
+def vol_interp = interpolateLinearSurface(vol_json, axisY, axisZ, y, E) // Interpolated value of volatility from vol surface
+
+// CALCULATION OF OPTION VALUE
+def Call_Option_COKE = getVanillaBScall_templ(S_COKE, E, vol_interp, tau, r , D_COKE) // OPTION VALUE
+
+return Call_Option_COKE

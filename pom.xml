@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.trmsys.cmf.maven</groupId>
+        <artifactId>parent-pom</artifactId>
+        <version>2.0.0.RELEASE</version>
+    </parent>
+
+    <groupId>com.trmsys.fpp.library.vaas</groupId>
+    <artifactId>fpp-library-root</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <fpp.version>2.2.0.M6</fpp.version>
+        <fpp.common.library.version>1.3.0.M3</fpp.common.library.version>
+        <fpp.plugin.version>2.0.9.RELEASE</fpp.plugin.version>
+    </properties>
+
+    <scm>
+        <developerConnection>
+            scm:git:ssh://git@scm-git-eur.misys.global.ad:7999/maftp/fpp-library.git
+        </developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+
+    <modules>
+        <module>fpp-library</module>
+    </modules>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <configuration>
+                    <preparationGoals>clean install</preparationGoals>
+                    <autoVersionSubmodules>true</autoVersionSubmodules>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

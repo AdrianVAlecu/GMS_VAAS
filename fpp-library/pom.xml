@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.trmsys.fpp.library.vaas</groupId>
+        <artifactId>fpp-library-root</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <artifactId>fpp-library</artifactId>
+    <packaging>fpp-lib</packaging>
+    <version>1.0.0-SNAPSHOT</version>
+
+    <build>
+        <plugins>
+            <!-- library plugin -->
+            <plugin>
+                <groupId>com.trmsys.fpp.maven.plugin</groupId>
+                <artifactId>fpp-maven-plugin</artifactId>
+                <version>${fpp.plugin.version}</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <fppLibraryName>VAAS</fppLibraryName>
+                    <fppLibraryLocation>src/main/resources/com/trmsys/fpp/library</fppLibraryLocation>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.trmsys.fpp.library</groupId>
+            <artifactId>fpp-common-library</artifactId>
+            <version>${fpp.common.library.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.trmsys.fpp.library</groupId>
+            <artifactId>fpp-common-library-test</artifactId>
+            <version>${fpp.common.library.version}</version>
+        </dependency>
+	       <dependency>
+            <groupId>com.trmsys.fpp.library</groupId>
+            <artifactId>fpp-script-runner</artifactId>
+            <version>${fpp.common.library.version}</version>
+        </dependency>
+    </dependencies>
+
+</project>

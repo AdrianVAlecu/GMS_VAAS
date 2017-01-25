@@ -1,0 +1,20 @@
+{
+  "marketData": [
+    {
+      "id": {
+        "type": "STOCK_PRICE",
+        "parameters": [
+          "ABC"
+        ]
+      },
+      "points": [
+        {
+          "values": [
+            200
+          ]
+        }
+      ]
+    }
+  ],
+  "historicalData": []
+}

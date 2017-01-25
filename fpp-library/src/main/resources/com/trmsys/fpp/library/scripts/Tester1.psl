@@ -1,0 +1,46 @@
+/**
+ * This   Script is used to price a vanilla equity call option using the Black Scholes Model
+ * It is made to demonstrate knowledge of the structure of the marketdata json file and of the module which is used to define functions.  
+ * You can find more information about the examples in which this script is used in the VaaS tutorials, chapter 4 Financial Models Examples
+ * where this psl is also part of a template 
+ *  
+ */
+
+def YIELD_CURVE = "YIELD_CURVE"
+def maturityDates = 100
+
+def S = 200.0  // Spot price array of doubles
+def E = 100  // Strike price
+def vol = 0.2  // Volatility
+def tau = 0.05 //  Time to expiry expressed in year
+def D = 0.0 // Continuously-comp
+
+def Call_Option = array(length(PriceIndex),0.0)
+def lower=50000
+def upper=60000
+
+for ( def i = 0 ; i < length(PriceIndex) ; i ++ ) {
+	def r = 0.05  // Interest rate
+
+	def ir_x = axis(YIELD_CURVE, ["JPY", PriceIndex[i]], 0)
+	def ir_values = data1D(YIELD_CURVE, ["JPY", PriceIndex[i]], calculationDate())
+	
+	//trace ( "IR_X size: ", length(ir_x) )
+	//trace ( "IR_value size: ", length(ir_values) )
+	
+	for (def j = 0 ; j < length(ir_values) ; j ++ ) {
+		if ( maturityDates == ir_x[j] ) {
+			r = ir_values[j]
+		}
+	}
+	
+	def loopSize = lower //intRand(lower,upper)
+	
+	for ( def u = 0 ; u < loopSize ; u ++ ) {
+		getVanillaBScall_templ(S, E, vol, tau, r, D) 
+	}
+		
+	Call_Option[i] = getVanillaBScall_templ(S, E, vol, tau, r, D) 
+}
+
+return Call_Option

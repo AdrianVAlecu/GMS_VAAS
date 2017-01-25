@@ -1,0 +1,21 @@
+{
+  "historicalData": [],
+  "marketData": [
+    {
+      "id": {
+        "parameters": [
+          "MARKET_DATA_PARAM_1",
+          "MARKET_DATA_PARAM_2"
+        ],
+        "type": "MARKET_DATA_TYPE"
+      },
+      "points": [
+        {
+          "values": [
+            50.0
+          ]
+        }
+      ]
+    }
+  ]
+}

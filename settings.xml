@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+    <mirrors>
+        <mirror>
+            <!-- This sends everything else to /public -->
+            <id>nexus</id>
+            <mirrorOf>*</mirrorOf>
+            <url>http://bm-artifacts/maven/content/groups/public</url>
+        </mirror>
+    </mirrors>
+
+    <profiles>
+        <profile>
+            <id>nexus</id>
+            <pluginRepositories>
+                <pluginRepository>
+                    <id>public</id>
+                    <name>Public Repositories</name>
+                    <url>http://bm-artifacts/maven/content/groups/public</url>
+                    <layout>default</layout>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </pluginRepository>
+            </pluginRepositories>
+            <repositories>
+                <repository>
+                    <id>public</id>
+                    <name>Public Repositories</name>
+                    <url>http://bm-artifacts/maven/content/groups/public</url>
+                    <layout>default</layout>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                        <updatePolicy>interval:60</updatePolicy>
+                        <checksumPolicy>fail</checksumPolicy>
+                    </snapshots>
+                </repository>
+
+                <repository>
+                    <id>homemade-release</id>
+                    <name>Only for publishing homemade releases</name>
+                    <url>http://bm-artifacts/maven/content/repositories/homemade-release</url>
+                    <layout>default</layout>
+                    <releases>
+                        <enabled>false</enabled>
+                    </releases>
+                </repository>
+                <repository>
+                    <id>homemade-snapshot</id>
+                    <name>Only for publishing homemade snapshots</name>
+                    <url>http://bm-artifacts/maven/content/repositories/homemade-snapshot</url>
+                    <layout>default</layout>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </repository>
+            </repositories>
+        </profile>
+    </profiles>
+    <activeProfiles>
+        <!-- make the profile active all the time -->
+        <activeProfile>nexus</activeProfile>
+    </activeProfiles>
+</settings>

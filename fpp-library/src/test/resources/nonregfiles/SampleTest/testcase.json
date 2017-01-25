@@ -1,0 +1,6 @@
+{
+  "marketDataSetName": "MarketData",
+  "asOf": "2003-08-27",
+  "expectColumns":  ["result"],
+  "expectResult": 100.0
+}

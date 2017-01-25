@@ -1,0 +1,106 @@
+ /**
+ * Returns the present value of a coupon bearing bond
+ * @param principal
+ *        This is the amount that you will receive at maturity (This is a double)
+ * @param coupon_structure_vals
+ *        These are the coupons expressed as percentage of the principal (This is an array of doubles)
+ * @param coupon_dates
+ *        These are the coupon dates converted to a number on a day basis. 1970-01-01 is day 0 (This is an array of doubles)
+ * @param current_date
+ *        This is the date on which the bond is valued (This is a "date" type variable) 
+ * @param maturity
+ *        This is the maturity date of the bond, i.e. when the principal is returned (This is a date)
+ * @param yield_array
+ *        This is an array containing the yield-to-maturity values for increasing time-to-maturity (This is an array of doubles)
+ * @param duration_array
+ *        This is an array with the time-to-maturity values corresponding to the yield-to-maturity values (This is an array of doubles)
+ * @return
+ *        V: This is the net present value of the bond. It is obtained by calculating the PV of principal and coupons (This is a double)
+ */
+
+
+def CBB_val_templ(principal, coupon_dates,coupon_structure_vals, maturity, current_date, yield_array, duration_array){
+    
+    def calc_date = dateToDays(current_date) // Calculation date represented as a double
+    def mat_date = dateToDays(maturity)  // Maturity date represented as double
+
+    def yield = binsearch_templ(mat_date, calc_date, yield_array, duration_array) // Returns the interpolated yield-to-maturity
+    def coupon_sum = 0  // Variable to contain the sum of discounted values of coupons
+
+    // This for loop is used to sum the values of the coupons 
+    for (def i = 0; i < length(coupon_structure_vals) ; i++){
+        coupon_sum += coupon_structure_vals[i] * exp(-yield * (coupon_dates[i] - calc_date) / 365)
+    }
+    
+    def V = principal * (exp(-yield * (mat_date - calc_date) / 365) + coupon_sum) // Market value of the bond, priced on current_date
+    
+    return V
+}
+
+
+ /**
+ * Returns a linearly interpolated value of the yield
+ * @param mat_date
+ *        Maturity date expressed as a double
+ * @param calc_date
+ *        Calculate date expressed as a double
+ * @param yield_array
+ *        The array containing the y-axis values of the yield curve 
+ * @param duration_array
+ *        The array containing the x-axis values of the yield curve
+ * @return
+ *        val: The interpolated value of the yield-to-maturity
+ */
+
+def binsearch_templ(mat_date, calc_date, yield_array, duration_array){
+
+    def length_of_bond = mat_date - calc_date
+    def size = length(duration_array)  
+    def idx = 0
+    def low = 0
+    def high = size - 1
+    def len = size
+
+    if(mod(len, 2) == 0) {
+        idx = len / 2
+    }
+    else {
+        idx = (len - 1) /2
+    }
+
+    /*binary search start*/
+    while(low <= high) {
+        if(duration_array[idx] == length_of_bond) {  //Find and return the index in the array
+            return yield_array[idx]; //The value is in the array so no need to interpolate
+        }
+        else {
+                if(duration_array[idx] > length_of_bond) {
+                    high = idx - 1
+                }else { 
+                    low = idx + 1
+                }
+            }
+        len = high + low
+        if(mod(len, 2) == 0) {
+            idx = len / 2
+        }
+        else {
+            idx = (len - 1) /2
+        }
+    }
+
+    def low_idx = 0
+    while(high < 0)
+        {high++}
+    low_idx = high
+
+    def high_idx = 0
+    while(low > size - 1)
+        {low--}
+    high_idx = low
+    /*binary search end*/
+ 
+  def val = yield_array[low_idx] + (yield_array[high_idx] - yield_array[low_idx]) * (length_of_bond - duration_array[low_idx]) / (duration_array[high_idx] - duration_array[low_idx])
+  
+  return val
+}

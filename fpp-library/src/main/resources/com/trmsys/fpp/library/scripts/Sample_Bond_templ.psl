@@ -1,0 +1,25 @@
+/**
+* This script is used to demonstrated the use of the yield curve from a market data .json
+* You can find more information about this file in VaaS Tutorial website Chapter 4 Financial models examples
+*  This is done in the context of pricing a simple coupon-bearing bond.  This script is used in conjunction with:
+*
+* module: BondPricing_templ.module
+* scenarioData: MarketData_Bond_templ.json
+* documents: MarketDeal_Bond_templ.json
+*
+*/
+ 
+// Input data CBB_val(...) function to use
+def coupon_structure_vals = data1D("FIXED_INCOME",["COUPON","USD"],calculationDate())
+def coupon_dates = axis("FIXED_INCOME", ["COUPON","USD"], 0)
+def yield_curve = data1D("YIELD_CURVE",["USD","COUPON_BEARING_BOND_RATE"],calculationDate())
+def yield_axis = axis("YIELD_CURVE",["USD","COUPON_BEARING_BOND_RATE"], 0)
+ 
+def x = principal + 10.0
+ 
+// Calling the CBB_val(...) function
+def bond_val = CBB_val_templ(principal, coupon_dates,coupon_structure_vals, maturity, value_date,  yield_curve, yield_axis)
+ 
+// Return the bond value
+return bond_val
+curl -X POST http://52.38.114.117:8090/fpp-addon/rest/docker/stop/container/{excel_container}

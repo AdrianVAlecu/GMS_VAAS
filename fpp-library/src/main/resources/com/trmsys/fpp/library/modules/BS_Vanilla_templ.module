@@ -1,0 +1,77 @@
+/**
+ * Returns an array containing the values of Black Scholes Vanilla calls 
+ * @param S
+ *        Spot price of the option (This is an array of doubles).  
+ * @param E
+ *        Strike of the option (This is a double)
+ * @param vol
+ *        Volatility of the option (This is a double)
+ * @param tau
+ *        Time to maturity (This is a double)
+ * @param r
+ *        Risk free interest rate (This is a double)
+ * @return
+ *        Call_Option: Array of doubles (same size as S) with the option price corresponding to the value of the underlying at maturity
+ */
+
+def getVanillaBScall_templ(S, E, vol, tau, r, D){
+   
+        def d1 = getBSdplus_templ(S, E, vol, tau, r, D)
+        def d2 = getBSdminus_templ(S, E, vol, tau, r, D)
+        def Call_Option = 0
+        if (tau > 0){
+            Call_Option = S * exp(-D * tau) * NormalCDFCody(d1) - E * exp(-r * tau) * NormalCDFCody(d2)           
+        } else if (tau == 0) {
+             if ((S - E) > 0){
+             Call_Option = (S - E)            
+             } else {
+                 Call_Option = 0               
+             }
+        }
+        return Call_Option
+}
+
+
+/**
+ * Returns the value of dPlus parameter in the Black-Scholes formula
+ * @param spot_price
+ *        The spot price at the maturity of the option
+ * @param strike
+ *        Strike of the option
+ * @param volatility
+ *        Volatility of the option
+ * @param timeToMaturity
+ *        Year fraction corresponding to the maturity of the option
+ * @param r
+ *        Risk-free interest-rate
+ * @param D
+ *        Divident in the case of continuous compounding
+ * @return
+ *        dPlus parameter
+ */
+ 
+def getBSdplus_templ(spot_price, strike, volatility, timeToMaturity, r, D){
+    return ((log(spot_price / strike) + (r - D + 0.5 * volatility * volatility) * timeToMaturity) / (volatility * sqrt(timeToMaturity)))
+}
+
+/**
+ * Returns the value of dMinus parameter in the Black-Scholes formula
+ * @param spot_price
+ *        The spot price at the maturity of the option
+ * @param strike
+ *        Strike of the option
+ * @param volatility
+ *        Volatility of the option
+ * @param timeToMaturity
+ *        Year fraction corresponding to the maturity of the option
+ * @param r
+ *        Risk-free interest-rate
+ * @param D
+ *        Divident in the case of continuous compounding
+ * @return
+ *        dMinus parameter
+ */
+ 
+def getBSdminus_templ(spot_price, strike, volatility, timeToMaturity, r, D){
+    return ((log(spot_price / strike) + (r - D - 0.5 * volatility * volatility )* timeToMaturity) / (volatility * sqrt(timeToMaturity)))
+}
